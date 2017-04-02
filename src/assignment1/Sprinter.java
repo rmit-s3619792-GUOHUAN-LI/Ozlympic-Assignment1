@@ -1,3 +1,4 @@
+//done by s3619792 Guohuan Li
 public class Sprinter extends Athlete{
     private int id;
 
