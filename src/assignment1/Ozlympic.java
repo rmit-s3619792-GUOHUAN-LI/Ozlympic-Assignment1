@@ -1,3 +1,4 @@
+//done by s3619792 Guohuan Li
 import java.util.*;
 public class Ozlympic{
     public static Game current;
@@ -8,7 +9,7 @@ public class Ozlympic{
         while(true){
             int n;
             int flag=-1;
-            show_options();
+            menu();
             Scanner reader=new Scanner(System.in);
             System.out.print("Enter a option:");
             n=reader.nextInt();
@@ -34,7 +35,7 @@ public class Ozlympic{
                     flag=1;
                     break;
                 default:
-                    System.out.println("no this option!");
+                    System.out.println("you only can choose the option shown!");
             }
             if(flag==1){
                 break;
@@ -46,14 +47,11 @@ public class Ozlympic{
     public static void display_final_result_of_games(){
         for(Game game:game_list){
             System.out.println("Game id:"+game.id);
-            if(game.winner==null){
-                System.out.println("the game is not compeleted.So there is no winner in this game.");
-            }else{
+           
             System.out.println("the game winner:"+game.winner);
             }
         }
-    }
-
+    
     //this method display all the points of athletes.
     public static void display_the_points_of_all_athletes(){
         for(Game game:game_list){
@@ -91,8 +89,8 @@ public class Ozlympic{
 
     }
 
-    //this method show the option message.
-    public static void show_options(){
+    //this method show the option message,which is menu
+    public static void menu(){
         System.out.println();
         System.out.println();
         System.out.println("Ozlympic Game\n");
@@ -109,7 +107,7 @@ public class Ozlympic{
     //this method show the game that user can predict.
     public static String show_games(){
         String _id;
-        System.out.println("Therea are all the games you can select:");
+        System.out.println("There are all the games you can select:");
         for(Game game:game_list){
             if(4<=game.show_player_numbers()&&game.show_player_numbers()<=8){
                 System.out.print(game.id+" ");
