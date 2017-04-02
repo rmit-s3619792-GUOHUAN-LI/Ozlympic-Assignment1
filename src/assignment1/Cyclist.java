@@ -1,3 +1,4 @@
+//done by s3619792
 public class Cyclist extends Athlete{
     private int id;
     public Cyclist(String _name,String _state,int _age){
