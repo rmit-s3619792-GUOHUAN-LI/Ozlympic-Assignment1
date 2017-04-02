@@ -1,3 +1,4 @@
+// done by s3619792 Guohuan Li
 public class SuperAthlete extends Athlete{
     private int id;
     public SuperAthlete(String _name,String _state,int _age){
