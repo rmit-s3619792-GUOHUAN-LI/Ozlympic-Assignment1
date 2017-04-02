@@ -1,3 +1,4 @@
+//done by s3619792 Guohuan Li
 public abstract class Athlete{
     static int num=0;
     public int time;
